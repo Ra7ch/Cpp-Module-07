@@ -18,8 +18,6 @@
 
 template<typename T, typename T2>
 void iter(T *array, int N, T2& func) { 
-	if (array == NULL || func == NULL)
-		return ;
 	for (int i = 0; i < N; i++) {
 		func(array[i]);
 	}
