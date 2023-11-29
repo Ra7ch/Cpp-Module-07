@@ -6,7 +6,7 @@
 /*   By: raitmous <raitmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 14:45:24 by raitmous          #+#    #+#             */
-/*   Updated: 2023/11/28 06:57:03 by raitmous         ###   ########.fr       */
+/*   Updated: 2023/11/29 10:00:04 by raitmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ class Array {
 		Array (const Array& other);
 		
 		Array& operator= (const Array& other);
-		T& operator[] (int index);
-		const T& operator[] (int index) const;
+		T& operator[] (unsigned int index);
+		const T& operator[] (unsigned int index) const;
 
 		~Array();
 
@@ -81,15 +81,15 @@ Array<T>& Array<T>::operator=(const Array& other) {
 
 
 template <typename T>
-T& Array<T>::operator[] (int index) {
-	if (index >= static_cast<int>(this->size()) || index < 0 || array == NULL)
+T& Array<T>::operator[] (unsigned int index) {
+	if (index >= this->size() || array == NULL)
 		throw InvalidIndexException();
 	return (array[index]);
 }
 
 template <typename T>
-const T& Array<T>::operator[] (int index) const{
-	if (index >= static_cast<int>(this->size()) || index < 0 || array == NULL)
+const T& Array<T>::operator[] (unsigned int index) const{
+	if (index >= this->size() || array == NULL)
 		throw InvalidIndexException();
 	return (array[index]);
 }
