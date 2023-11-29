@@ -6,7 +6,7 @@
 /*   By: raitmous <raitmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 13:09:24 by raitmous          #+#    #+#             */
-/*   Updated: 2023/11/29 09:52:55 by raitmous         ###   ########.fr       */
+/*   Updated: 2023/11/29 09:54:52 by raitmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main () {
 	char b[] = {'R', 'C', 'f', '1', '8'};
 	
 	iter(b, 5, f1<const int>);
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < 5; i++) { 
 		std::cout<< b[i] << std:: endl;
 	}
 
