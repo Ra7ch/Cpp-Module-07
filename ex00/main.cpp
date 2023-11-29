@@ -6,7 +6,7 @@
 /*   By: raitmous <raitmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:21:53 by raitmous          #+#    #+#             */
-/*   Updated: 2023/11/28 08:53:45 by raitmous         ###   ########.fr       */
+/*   Updated: 2023/11/29 10:38:05 by raitmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,14 @@ int main ()
 	std::cout << "min( g, h ) = " << ::min( g, h ) << std::endl;
 	std::cout << "max( g, h ) = " << ::max( g, h ) << std::endl;
 
+	std::cout << "************************************" << std::endl;
+
+	{
+        int a = 1;
+        int b = 2;
+        std::cout << "a: " << a << ", b: " << b << std::endl;
+        std::cout << "a ptr: " << &a << ", b ptr: " << &b << std::endl;
+        std::cout << "min: " << min(a, b) << std::endl;
+        std::cout << "min ptr: " << &min(a, b) << std::endl;
+    }
 }
