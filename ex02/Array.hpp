@@ -6,7 +6,7 @@
 /*   By: raitmous <raitmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 14:45:24 by raitmous          #+#    #+#             */
-/*   Updated: 2023/11/29 10:00:04 by raitmous         ###   ########.fr       */
+/*   Updated: 2023/11/29 11:26:39 by raitmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,14 +50,17 @@ template <typename T>
 Array<T>::Array() : _size (0) {
 	array = NULL;
 	array = new T[]();
+	if (!array)
+		throw std::runtime_error("new failed");
 }
 
 template <typename T>
 Array<T>::Array(unsigned int index) : _size (index) {
 	array = NULL;
 	array = new T[index];
+	if (!array)
+		throw std::runtime_error("new failed");
 }
-
 
 template <typename T>
 Array<T>::Array(const Array& other) : _size (other._size){
@@ -72,6 +75,8 @@ Array<T>& Array<T>::operator=(const Array& other) {
 		if (array)
 			delete[] array;
 		array = new T[other.size()];
+		if (!array)
+			throw std::runtime_error("new failed");
 		_size = other._size;
 		for (int i = 0; i < static_cast<int>(other.size()); i++)
 			array[i] = other.array[i];
