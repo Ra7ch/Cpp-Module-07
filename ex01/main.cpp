@@ -6,7 +6,7 @@
 /*   By: raitmous <raitmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 13:09:24 by raitmous          #+#    #+#             */
-/*   Updated: 2023/11/29 09:55:11 by raitmous         ###   ########.fr       */
+/*   Updated: 2023/11/29 09:55:26 by raitmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int main () {
 	std::string c[] = {"rachid", "rach", "simo"};
 	
 	iter(c, 3, addOne<std::string>);
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < 3; i++) { 
 		std::cout<< c[i] << std:: endl;
 	}
 }
